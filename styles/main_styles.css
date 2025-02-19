@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
-/******************************
+/*********************************
 
 [Table of Contents]
 
@@ -1087,6 +1087,7 @@ background-repeat: no-repeat;
   .options__wishlist.active .icon {
 	color: #ff0000;
   }
+	
   
 /* Register Now Form */
 

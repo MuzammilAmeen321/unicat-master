@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Changing Banner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main_styles.css">
+    <style>
+        .banner {
+            width: 90%;
+            /* max-width: 800px; */
+            height: 270px;
+            margin: auto;
+            text-align: left;
+            padding: 40px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #f3c769;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            transition: transform 1s ease-in-out; /* Zoom effect for the whole banner */
+        }
+
+        .banner img {
+            width: 300px; /* Set image size to 300px */
+            height: auto;
+            border-radius: 10px;
+            position: absolute;
+            right: 20px;
+            transition: transform 1s ease-in-out;
+        }
+
+        .banner-content {
+            max-width: 70%;
+            padding-left: 10px;
+            line-height: 7px;
+        }
+
+        .banner-content h3 {
+            color: black;
+            font-weight: bold;
+        }
+
+        .banner-content p {
+            color: #444;
+            opacity: 1; /* No transition, just static text */
+        }
+
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div id="banner-container" class="banner mt-5">
+        <div class="banner-content" id="banner-text">
+            <h3 id="course-heading">Web Development <span class="highlight">2025</span></h3>
+            <p>Build modern websites with the latest technologies.</p>
+            <p>Learn HTML, CSS, JavaScript, and frameworks like React.</p>
+            <p>Create interactive and responsive websites.</p>
+            <p>Start your journey as a web developer today!</p>
+        </div>
+        <img id="banner-img" src="./courses-images/banner-image-2.png" alt="Course Image">
+    </div>
+    <div class="twelve d-flex justify-content-center">
+      <h1 class=" m-5 emboss ">Popular Courses</h1>
+    </div>
+    <div class="card-wrapper">
+      
+        <!-- Frontend Development Card -->
+        <div class="card card-course">
+          <a href="#">
+            <div class="card__image">
+              <img src="./courses-images/front-end.jpg" alt="Frontend Development Course">
+            </div>
+            <div class="card__details">
+              <h4 class="emboss">Frontend Development </h4>
+              <div class="details__description">
+                Learn the latest frontend technologies such as HTML, CSS, JavaScript, and more.
+              </div>
+              <div class="details__bottom">
+                <div class="details__price">
+                  <h4 class="emboss">PKR40000</h4>
+                  <span class="price--old">PKR50000</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="card__options">
+            <div class="options__wishlist">
+              <i class="icon fa fa-heart"></i>
+            </div>
+          </div>
+          <button class="neon-button">Enroll Now</button>
+        </div>
+    
+        <!-- Backend Development Card -->
+        <div class="card card-course">
+          <a href="#">
+            <div class="card__image">
+              <img src="./courses-images/SkillsRequiredtoBecomeaBackendDeveloper.png" alt="Backend Development Course">
+            </div>
+            <div class="card__details">
+              <h4 class="emboss">Backend Development</h4>
+              <div class="details__description">
+                Master server-side technologies like PHP, MySQL, and API development.
+              </div>
+              <div class="details__bottom">
+                <div class="details__price">
+                  <h4 class="emboss">PKR40000</h4>
+                  <span class="price--old">PKR50000</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="card__options">
+            <div class="options__wishlist">
+              <i class="icon fa fa-heart"></i>
+            </div>
+          </div>
+          <button class="neon-button">Enroll Now</button>
+        </div>
+    
+        <!-- Full Stack Development Card -->
+        <div class="card card-course">
+          <a href="#">
+            <div class="card__image">
+              <img src="./courses-images/full stack-2.webp" alt="Full Stack Development Course">
+            </div>
+            <div class="card__details">
+              <h4 class="emboss">Full Stack Development</h4>
+              <div class="details__description">
+                Become a Full Stack developer using React.js, Laravel, and other powerful tools.
+              </div>
+              <div class="details__bottom">
+                <div class="details__price">
+                  <h4 class="emboss">PKR60000</h4>
+                  <span class="price--old">PKR70000</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="card__options">
+            <div class="options__wishlist">
+              <i class="icon fa fa-heart"></i>
+            </div>
+          </div>
+          <button class="neon-button">Enroll Now</button>
+        </div>
+    
+        <!-- WordPress Development Card -->
+        <div class="card card-course">
+          <a href="#">
+            <div class="card__image">
+              <img src="./images//wordpress.png" alt="WordPress Development Course">
+            </div>
+            <div class="card__details">
+              <strong class="details__name">WordPress Development</strong>
+              <div class="details__description">
+                Learn to build beautiful websites and blogs using WordPress.
+              </div>
+              <div class="details__bottom">
+                <div class="details__price">
+                  <span class="price">PKR 25000</span>
+                  <span class="price--old">PKR 30000</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="card__options">
+            <div class="options__wishlist">
+              <i class="icon fa fa-heart"></i>
+            </div>
+          </div>
+          <button class="neon-button">Enroll Now</button>
+        </div>
+        <!-- new courses -->
+        <div class="card card-course">
+          <a href="#">
+            <div class="card__image">
+              <img src="./courses-images/Node.js_logo.svg.png" alt="WordPress Development Course">
+            </div>
+            <div class="card__details">
+              <strong class="details__name">Angular.JS</strong>
+              <div class="details__description">
+                Master Angular and build powerful, scalable web applications with a structured framework.
+              </div>
+              <div class="details__bottom">
+                <div class="details__price">
+                  <span class="price">PKR 20000</span>
+                  <span class="price--old">PKR 30000</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="card__options">
+            <div class="options__wishlist">
+              <i class="icon fa fa-heart"></i>
+            </div>
+          </div>
+          <button class="neon-button">Enroll Now</button>
+        </div>
+        <div class="card card-course">
+          <a href="#">
+            <div class="card__image">
+              <img src="./courses-images/ReactJS-Framework-Benefits.png" alt="WordPress Development Course">
+            </div>
+            <div class="card__details">
+              <strong class="details__name">React.JS</strong>
+              <div class="details__description">
+                Learn React.js from scratch and build dynamic web applications with modern UI components.
+              </div>
+              <div class="details__bottom">
+                <div class="details__price">
+                  <span class="price">PKR 25000</span>
+                  <span class="price--old">PKR 35000</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="card__options">
+            <div class="options__wishlist">
+              <i class="icon fa fa-heart"></i>
+            </div>
+          </div>
+          <button class="neon-button">Enroll Now</button>
+        </div>
+        <div class="card card-course">
+          <a href="#">
+            <div class="card__image">
+              <img src="./courses-images/laravel-php.jpg" alt="WordPress Development Course">
+            </div>
+            <div class="card__details">
+              <strong class="details__name">Laravel(php framework)</strong>
+              <div class="details__description">
+                Laravel is a powerful PHP framework that simplifies web development with elegant syntax, built-in tools, and robust security features.
+              </div>
+              <div class="details__bottom">
+                <div class="details__price">
+                  <span class="price">PKR 25000</span>
+                  <span class="price--old">PKR 35000</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="card__options">
+            <div class="options__wishlist">
+              <i class="icon fa fa-heart"></i>
+            </div>
+          </div>
+          <button class="neon-button">Enroll Now</button>
+        </div>
+        <div class="card card-course">
+          <a href="#">
+            <div class="card__image">
+              <img src="./courses-images/app development.jpeg" alt="WordPress Development Course">
+            </div>
+            <div class="card__details">
+              <strong class="details__name">App Development(Flutter)</strong>
+              <div class="details__description">
+                Flutter is a UI toolkit by Google for building natively compiled mobile, web, and desktop apps from a single codebase.
+              </div>
+              <div class="details__bottom">
+                <div class="details__price">
+                  <span class="price">PKR 20000</span>
+                  <span class="price--old">PKR 30000</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="card__options">
+            <div class="options__wishlist">
+              <i class="icon fa fa-heart"></i>
+            </div>
+          </div>
+          <button class="neon-button">Enroll Now</button>
+        </div>
+        <div class="card card-course">
+          <a href="#">
+            <div class="card__image">
+              <img src="./courses-images/Database-In-DBMS.jpg" alt="WordPress Development Course">
+            </div>
+            <div class="card__details">
+              <strong class="details__name">Data Base</strong>
+              <div class="details__description">
+                A database is an organized collection of data that allows efficient storage, retrieval, and management, essential for dynamic applications.
+              </div>
+              <div class="details__bottom">
+                <div class="details__price">
+                  <span class="price">PKR 15000</span>
+                  <span class="price--old">PKR 20000</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="card__options">
+            <div class="options__wishlist">
+              <i class="icon fa fa-heart"></i>
+            </div>
+          </div>
+          <button class="neon-button">Enroll Now</button>
+        </div>
+        <div class="card card-course">
+          <a href="#">
+            <div class="card__image">
+              <img src="./courses-images/apa-itu-php.png" alt="WordPress Development Course">
+            </div>
+            <div class="card__details">
+              <strong class="details__name">PHP</strong>
+              <div class="details__description">
+                PHP is a server-side scripting language designed for web development, enabling dynamic and interactive websites with seamless database integration.
+              </div>
+              <div class="details__bottom">
+                <div class="details__price">
+                  <span class="price">PKR 25000</span>
+                  <span class="price--old">PKR 30000</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="card__options">
+            <div class="options__wishlist">
+              <i class="icon fa fa-heart"></i>
+            </div>
+          </div>
+          <button class="neon-button">Enroll Now</button>
+        </div>
+        <div class="card card-course">
+          <a href="#">
+            <div class="card__image">
+              <img src="./courses-images/html-css.jpg" alt="WordPress Development Course">
+            </div>
+            <div class="card__details">
+              <strong class="details__name">Html+Css</strong>
+              <div class="details__description">
+                HTML and CSS are the foundation of web development, where HTML structures the content and CSS styles it for a visually appealing design.
+              </div>
+              <div class="details__bottom">
+                <div class="details__price">
+                  <span class="price">PKR 20000</span>
+                  <span class="price--old">PKR 30000</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="card__options">
+            <div class="options__wishlist">
+              <i class="icon fa fa-heart"></i>
+            </div>
+          </div>
+          <button class="neon-button">Enroll Now</button>
+        </div>
+        <!-- seo course -->
+        <div class="card card-course">
+          <a href="#">
+            <div class="card__image">
+              <img src="./courses-images/seo.jpg" alt="WordPress Development Course">
+            </div>
+            <div class="card__details">
+              <strong class="details__name">Search engine Optimization (SEO)</strong>
+              <div class="details__description">
+                SEO (Search Engine Optimization) improves website visibility on search engines, driving organic traffic through optimized content.
+              </div>
+              <div class="details__bottom">
+                <div class="details__price">
+                  <span class="price">PKR 35000</span>
+                  <span class="price--old">PKR 40000</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="card__options">
+            <div class="options__wishlist">
+              <i class="icon fa fa-heart"></i>
+            </div>
+          </div>
+          <button class="neon-button">Enroll Now</button>
+        </div>
+        
+      </div>
+    
+
+    <script>
+        const banners = [
+            { heading: "Web Development", lines: ["Build modern websites with the latest technologies.", "Learn HTML, CSS, JavaScript, and frameworks like React.", "Create interactive and responsive websites.", "Start your journey as a web developer today!"] },
+            { heading: "App Development", lines: ["Develop mobile applications for iOS and Android.", "Learn Swift for iOS and Kotlin for Android.", "Understand the app development lifecycle.", "Build powerful and scalable apps with industry best practices."] },
+            { heading: "SEO", lines: ["Master the art of Search Engine Optimization.", "Increase website visibility and organic traffic.", "Learn on-page and off-page SEO techniques.", "Become a certified SEO expert!"] }
+        ];
+
+        let index = 0;
+        const bannerText = document.getElementById("banner-text");
+        const bannerImg = document.getElementById("banner-img");
+        const courseHeading = document.getElementById("course-heading");
+
+        // Function to change banner content (heading and lines)
+        function changeBanner() {
+            const bannerContainer = document.getElementById("banner-container");
+            bannerContainer.style.transform = "scale(0.9)";  // Zoom out effect on container
+            bannerImg.style.transform = "scale(0.8)"; // Zoom out effect on image
+
+            setTimeout(() => {
+                index = (index + 1) % banners.length; // Move to next banner
+                courseHeading.textContent = `${banners[index].heading} 2025`; // Change course heading
+                const lines = banners[index].lines;
+                const allParagraphs = bannerText.querySelectorAll('p');
+                allParagraphs.forEach((p, i) => {
+                    p.textContent = lines[i]; // Update paragraphs for each course
+                });
+
+                bannerContainer.style.transform = "scale(1)"; // Zoom in effect on container
+                bannerImg.style.transform = "scale(1)"; // Zoom in effect on image
+            }, 1000); // Wait for the zoom-out transition
+        }
+
+        // Initialize first banner and set interval for changing the banner
+        setInterval(changeBanner, 5000); // Change banner every 5 seconds
+    </script>
+    
+</body>
+</html>
